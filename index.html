@@ -127,9 +127,13 @@
                 <!-- Project 2 -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg transform -rotate-3"></div>
-                        <img src="https://placehold.co/600x400/111111/FFFFFF?text=CI_CD_PIPELINE" alt="Architecture" class="relative rounded-lg border border-white/10 w-full">
-                    </div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg transform rotate-3"></div>
+                            <img src="OIDC.png" alt="Architecture" class="lightbox-trigger relative rounded-lg border border-white/10 w-full cursor-pointer hover:border-cyan-400/50 hover:scale-[1.02] transition-all duration-300"
+                            data-images='["OIDC.png"]'>
+                            <div class="absolute bottom-4 right-4 bg-black/50 p-2 rounded-full pointer-events-none">
+                                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                            </div>
+                        </div>
                     <div>
                         <div class="cyber-card p-8">
                             <div class="flex items-center gap-3 mb-6">
@@ -142,9 +146,9 @@
                             </p>
                             <div class="flex flex-wrap gap-2 mb-8">
                                 <span class="px-3 py-1 bg-orange-500/20 text-orange-300 text-xs font-mono border border-orange-500/30 rounded">AWS</span>
-                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-mono border border-indigo-500/30 rounded">FARGATE</span>
-                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono border border-cyan-500/30 rounded">DOCKER</span>
-                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-mono border border-emerald-500/30 rounded">GITHUB</span>
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-mono border border-indigo-500/30 rounded">Cloudfront</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-mono border border-cyan-500/30 rounded">AWS STS</span>
+                                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-mono border border-emerald-500/30 rounded">GITHUB ACTIONS</span>
                             </div>
                             <div class="flex gap-4">
                                 <a href="#" class="px-6 py-2 border border-white/20 text-white/70 hover:text-white hover:border-purple-400 transition-all duration-300 text-sm font-mono">VIEW_CODE</a>
