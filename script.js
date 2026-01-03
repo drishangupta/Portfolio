@@ -180,3 +180,77 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+/* --- LIGHTBOX LOGIC --- */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const counter = document.getElementById('img-counter');
+const total = document.getElementById('img-total');
+
+let currentGallery = [];
+let currentIndex = 0;
+
+// Open Lightbox
+document.querySelectorAll('.lightbox-trigger').forEach(img => {
+    img.addEventListener('click', function() {
+        // Parse the list of images from the attribute
+        const imagesList = JSON.parse(this.getAttribute('data-images'));
+        
+        if (imagesList && imagesList.length > 0) {
+            currentGallery = imagesList;
+            currentIndex = 0; // Start at the first image
+            
+            updateLightbox();
+            lightbox.classList.remove('hidden');
+            setTimeout(() => lightbox.classList.remove('opacity-0'), 10); // Fade in
+            document.body.style.overflow = 'hidden'; // Freeze background scrolling
+        }
+    });
+});
+
+// Update Image Source
+function updateLightbox() {
+    lightboxImg.src = currentGallery[currentIndex];
+    counter.innerText = currentIndex + 1;
+    total.innerText = currentGallery.length;
+}
+
+// Navigation Controls
+document.getElementById('next-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % currentGallery.length; // Loop forward
+    updateLightbox();
+});
+
+document.getElementById('prev-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length; // Loop backward
+    updateLightbox();
+});
+
+// Close Functions
+function closeLightbox() {
+    lightbox.classList.add('opacity-0');
+    setTimeout(() => {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Unfreeze scroll
+    }, 300);
+}
+
+document.getElementById('close-lightbox').addEventListener('click', closeLightbox);
+
+// Close on background click
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('flex')) {
+        closeLightbox();
+    }
+});
+
+// Keyboard Support
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'ArrowRight') document.getElementById('next-btn').click();
+        if (e.key === 'ArrowLeft') document.getElementById('prev-btn').click();
+        if (e.key === 'Escape') closeLightbox();
+    }
+});
