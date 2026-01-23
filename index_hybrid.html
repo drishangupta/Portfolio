@@ -80,35 +80,37 @@
 
     <!-- About Section -->
     <section id="about" class="py-32 relative">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
                 <h2 class="text-5xl md:text-7xl font-black mb-4">
                     <span class="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">ABOUT</span>
                     <span class="text-white/20"> ME</span>
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto"></div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
                 <!-- Profile Picture -->
-                <div class="order-1 lg:order-1 flex justify-center">
-                    <div class="relative w-80 h-80 group">
-                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 rounded-lg transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
-                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-lg transform -rotate-6 group-hover:-rotate-12 transition-transform duration-300"></div>
-                        <img src="https://placehold.co/400x400/111111/22D3EE?text=Profile+Photo" alt="Drishan Gupta" class="relative rounded-lg border-2 border-white/10 w-full h-full object-cover">
+                <div class="lg:col-span-2 flex justify-center lg:justify-end">
+                    <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-2xl transform -rotate-6 group-hover:-rotate-12 transition-transform duration-300"></div>
+                        <img src="images/IMG_0133.png" alt="Drishan Gupta" class="relative rounded-2xl border-2 border-white/10 w-full h-full object-cover shadow-2xl">
                     </div>
                 </div>
                 
                 <!-- About Text -->
-                <div class="order-2 lg:order-2 cyber-card p-8 md:p-12">
-                    <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-6">
-                        I'm a Computer Science student and backend engineer with expertise in <span class="text-cyan-400 font-semibold">AWS cloud infrastructure</span>, <span class="text-purple-400 font-semibold">automation</span>, and <span class="text-pink-400 font-semibold">AI/ML systems</span>. I specialize in building serverless architectures, implementing CI/CD pipelines, and developing scalable backend solutions using Python and Django.
-                    </p>
-                    <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-6">
-                        As an <span class="text-yellow-400 font-bold">AWS Cloud Captain</span> — one of only <span class="text-yellow-400 font-bold">87 selected worldwide</span> — I founded and lead the <span class="text-cyan-400 font-semibold">AWS Cloud Club</span> at my college, organizing <span class="text-yellow-400 font-bold">20+ workshops</span> and engaging <span class="text-yellow-400 font-bold">1100+ students</span>. My professional experience includes automation engineering at PayBefikar and software development at LinuxWorld Informatics.
-                    </p>
-                    <p class="text-lg md:text-xl text-white/80 leading-relaxed">
-                        I hold <span class="text-orange-400 font-semibold">4 AWS certifications</span> including Solutions Architect Associate and AI Practitioner, plus <span class="text-red-400 font-semibold">RHCSA</span>. Currently exploring <span class="text-emerald-400 font-semibold">Agentic AI</span>, <span class="text-emerald-400 font-semibold">Computer Vision</span>, and cloud-native development. Open to collaborations on innovative cloud and AI projects.
-                    </p>
+                <div class="lg:col-span-3 space-y-6">
+                    <div class="cyber-card p-8 md:p-10">
+                        <p class="text-base md:text-lg text-white/80 leading-relaxed mb-6">
+                            I'm a Computer Science student and backend engineer with expertise in <span class="text-cyan-400 font-semibold">AWS cloud infrastructure</span>, <span class="text-purple-400 font-semibold">automation</span>, and <span class="text-pink-400 font-semibold">AI/ML systems</span>. I specialize in building serverless architectures, implementing CI/CD pipelines, and developing scalable backend solutions using Python and Django.
+                        </p>
+                        <p class="text-base md:text-lg text-white/80 leading-relaxed mb-6">
+                            As an <span class="text-yellow-400 font-bold">AWS Cloud Captain</span> — one of only <span class="text-yellow-400 font-bold">87 selected worldwide</span> — I founded and lead the <span class="text-cyan-400 font-semibold">AWS Cloud Club</span> at my college, organizing <span class="text-yellow-400 font-bold">20+ workshops</span> and engaging <span class="text-yellow-400 font-bold">1100+ students</span>. My professional experience includes automation engineering at PayBefikar and software development at LinuxWorld Informatics.
+                        </p>
+                        <p class="text-base md:text-lg text-white/80 leading-relaxed">
+                            I hold <span class="text-orange-400 font-semibold">4 certifications</span>: Solutions Architect Associate , Developer Associate, AI Practitioner, plus <span class="text-red-400 font-semibold">RHCSA</span>. Currently exploring <span class="text-emerald-400 font-semibold">Agentic AI</span>, <span class="text-emerald-400 font-semibold">Computer Vision</span>, and cloud-native development. Open to collaborations on innovative cloud and AI projects.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,12 +240,12 @@
                 </div>
 
                 <!-- Project 4 - Traffic Management System -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-yellow-500/20 rounded-lg transform rotate-3"></div>
                         <img src="https://placehold.co/600x400/111111/F59E0B?text=Traffic+Vision+System" alt="Traffic System" class="relative rounded-lg border border-white/10 w-full">
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <div class="cyber-card p-8">
                             <div class="flex items-center gap-3 mb-6">
                                 <div class="w-3 h-3 bg-orange-400 rounded-full"></div>
@@ -265,7 +267,7 @@
                                 <a href="#" class="px-6 py-2 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-mono text-sm hover:shadow-lg hover:shadow-orange-500/50 transition-all duration-300">LIVE_DEMO</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
